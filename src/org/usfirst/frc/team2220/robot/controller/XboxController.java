@@ -1,7 +1,5 @@
 package org.usfirst.frc.team2220.robot.controller;
 
-import org.usfirst.frc.team2200.robot.Constants;
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Joystick.AxisType;
 import edu.wpi.first.wpilibj.buttons.Button;
