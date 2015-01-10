@@ -2,6 +2,7 @@ package org.usfirst.frc.team2200.robot.commands;
 
 import org.usfirst.frc.team2200.robot.Constants;
 import org.usfirst.frc.team2200.robot.OI;
+import org.usfirst.frc.team2200.robot.Robot;
 import org.usfirst.frc.team2200.robot.subsystems.Drivetrain;
 
 import edu.wpi.first.wpilibj.command.Command;
@@ -17,7 +18,7 @@ public class OctocanumDrive extends Command
 
     public OctocanumDrive()
     {    	
-		requires(dt);
+		requires(Robot.drivetrain);
     }
 
     // Called just before this Command runs the first time

@@ -1,7 +1,6 @@
 package org.usfirst.frc.team2220.robot.controller;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Joystick.AxisType;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -23,46 +22,43 @@ public class XboxController implements IController
 	public final Button START_BUTTON = new JoystickButton(xbox,8);
 	public final Button LEFT_STICK_BUTTON = new JoystickButton(xbox,9);
 	public final Button RIGHT_STICK_BUTTON = new JoystickButton(xbox,10);
-
-	private AxisType axis;
 	
-	public double hi = xbox.getAxis(axis);
-	
-	public final int LEFT_STICK_LEFT_RIGHT = 1;
-	public final int LEFT_STICK_UP_DOWN = 2;
-	public final int RIGHT_STICK_LEFT_RIGHT = 3;
-	public final int RIGHT_STICK_UP_DOWN = 4;
-	public final int TRIGGER = 5;
+	public final int LEFT_STICK_X_AXIS = 1;
+	public final int LEFT_STICK_Y_AXIS = 2;
+	public final int LEFT_TRIGGER = 3;
+	public final int RIGHT_TRIGGER = 4;
+	public final int RIGHT_STICK_X_AXIS = 5;
+	public final int RIGHT_STICK_Y_AXIS = 6;
 
 
 	@Override
 	public double getLeftWheelFrontBack()
 	{
-		return LEFT_STICK_UP_DOWN;
+		return LEFT_STICK_Y_AXIS;
 	}
 
 	@Override
 	public double getRightWheelFrontBack()
 	{
-		return RIGHT_STICK_UP_DOWN;
+		return RIGHT_STICK_Y_AXIS;
 	}
 
 	@Override
 	public double getDriveLeftRight()
 	{
-		return LEFT_STICK_LEFT_RIGHT;
+		return LEFT_STICK_X_AXIS;
 	}
 
 	@Override
 	public double getDriveFrontBack()
 	{
-		return LEFT_STICK_UP_DOWN;
+		return LEFT_STICK_Y_AXIS;
 	}
 
 	@Override
 	public double getDriveRotate()
 	{
-		return RIGHT_STICK_LEFT_RIGHT;
+		return RIGHT_STICK_X_AXIS;
 	}
 
 	@Override
